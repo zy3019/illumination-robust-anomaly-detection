@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "evaluation_split": "dev",
+  "score_rows": 208,
+  "conditions": 13,
+  "memory_bank_exact": true,
+  "selected_indices_exact": true,
+  "threshold_exact": true,
+  "score_max_absolute_difference": 0.0,
+  "metrics_exact": true,
+  "actual": "D:\\ChatGPT\\111_cleanroom\\outputs\\reproduction_bottle_n5_A_seed42",
+  "reference": "D:\\ChatGPT\\111_cleanroom\\ChatGPT\\111_frozen_restore\\outputs\\dev_matrix_v1\\bottle_n5_A_seed42_attempt01",
+  "actual_model_sha256": "76cecfb3e584e7f5917a4e8eabf71bafe1c89d461544f1a51f561e9942a659df",
+  "reference_model_sha256": "76cecfb3e584e7f5917a4e8eabf71bafe1c89d461544f1a51f561e9942a659df",
+  "comparison": "Tensor/data values, not serialization bytes or wall clocks",
+  "personal_independence": "Not assessed by automated comparison"
+}

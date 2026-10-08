@@ -2,6 +2,7 @@
 import argparse
 import csv
 import json
+import os
 from pathlib import Path
 import sys
 ROOT=Path(__file__).resolve().parents[1]
@@ -16,7 +17,7 @@ def read(path):
 
 
 def compare(actual, reference):
-    actual,reference=Path(actual),Path(reference)
+    actual,reference=(Path(os.path.abspath(p)) for p in (actual,reference))
     for name in ['config.json','sample_lists.json','training_views.json','threshold.json']:
         if read(actual/name) != read(reference/name):
             raise ValueError('Reproduction differs: '+name)
@@ -36,6 +37,7 @@ def compare(actual, reference):
             raise ValueError('Per-image score/decision differs: '+x['path'])
         max_delta=max(max_delta,abs(float(x['score'])-float(y['score'])))
     am,bm=read(actual/'summary.json')['metrics'],read(reference/'summary.json')['metrics']
+    if len(am)!=len(bm):raise ValueError('Metric count differs')
     for x,y in zip(am,bm):
         for key in ['condition','image_auroc','pixel_auroc','fpr','recall','false_positives','true_positives']:
             if x[key]!=y[key]:raise ValueError('Metric differs: '+key)

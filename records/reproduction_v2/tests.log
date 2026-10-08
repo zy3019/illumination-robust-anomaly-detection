@@ -1,0 +1,29 @@
+Failed to find real location of C:\Python314\python.exe
+test_duplicate_and_missing_seeds_rejected (test_development_statistics.DevelopmentStatisticsTests.test_duplicate_and_missing_seeds_rejected) ... ok
+test_full_design_pair_counts_and_ablations (test_development_statistics.DevelopmentStatisticsTests.test_full_design_pair_counts_and_ablations) ... ok
+test_macro_within_seed_before_sd (test_development_statistics.DevelopmentStatisticsTests.test_macro_within_seed_before_sd) ... ok
+test_missing_ablation_rejected (test_development_statistics.DevelopmentStatisticsTests.test_missing_ablation_rejected) ... ok
+test_paired_std_preserves_seed_correlation (test_development_statistics.DevelopmentStatisticsTests.test_paired_std_preserves_seed_correlation) ... ok
+test_severity_uses_all_conditions_once (test_development_statistics.DevelopmentStatisticsTests.test_severity_uses_all_conditions_once) ... ok
+test_digest_asset_change_and_unknown_job_rejected (test_final_evaluation.FinalEvaluationTests.test_digest_asset_change_and_unknown_job_rejected) ... ok
+test_exact_auc_matches_reference_and_pairwise_with_ties (test_final_evaluation.FinalEvaluationTests.test_exact_auc_matches_reference_and_pairwise_with_ties) ... ok
+test_final_access_rejected_without_lock_before_io (test_final_evaluation.FinalEvaluationTests.test_final_access_rejected_without_lock_before_io) ... ok
+test_auroc_ties_against_pairwise_definition (test_pipeline.PipelineTests.test_auroc_ties_against_pairwise_definition) ... ok
+test_chunked_nearest_against_brute_force (test_pipeline.PipelineTests.test_chunked_nearest_against_brute_force) ... ok
+test_coreset_budget_and_unique_indices_with_identical_features (test_pipeline.PipelineTests.test_coreset_budget_and_unique_indices_with_identical_features) ... ok
+test_final_test_rejected_before_io (test_pipeline.PipelineTests.test_final_test_rejected_before_io) ... ok
+test_fixed_threshold_strict_greater (test_pipeline.PipelineTests.test_fixed_threshold_strict_greater) ... ok
+test_manifest_disjoint_reproducible_nested_and_integrity (test_pipeline.PipelineTests.test_manifest_disjoint_reproducible_nested_and_integrity) ... ok
+test_perturbations_and_view_pairing (test_pipeline.PipelineTests.test_perturbations_and_view_pairing) ... ok
+test_bundle_path_traversal_rejected (test_repairs.RepairTests.test_bundle_path_traversal_rejected) ... ok
+test_bundle_restore_hashes_and_non_overwrite (test_repairs.RepairTests.test_bundle_restore_hashes_and_non_overwrite) ... ok
+test_column_vectors_do_not_broadcast (test_repairs.RepairTests.test_column_vectors_do_not_broadcast) ... ok
+test_complete_attempt_adopted_and_corrupt_attempt_stops (test_repairs.RepairTests.test_complete_attempt_adopted_and_corrupt_attempt_stops) ... ok
+test_existing_manifest_is_read_only_and_detects_mask_corruption (test_repairs.RepairTests.test_existing_manifest_is_read_only_and_detects_mask_corruption) ... ok
+test_invalid_metric_inputs_rejected (test_repairs.RepairTests.test_invalid_metric_inputs_rejected) ... ok
+test_modified_report_table_rejected_before_generation (test_repairs.RepairTests.test_modified_report_table_rejected_before_generation) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.478s
+
+OK

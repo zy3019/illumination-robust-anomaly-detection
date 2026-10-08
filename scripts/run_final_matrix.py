@@ -75,7 +75,7 @@ def main():
     parser.add_argument('--verify-only', action='store_true')
     args=parser.parse_args()
     if args.frozen_root:
-        ROOT = args.frozen_root.resolve()
+        ROOT = Path(os.path.abspath(args.frozen_root)).resolve()
     path=ROOT/args.protocol
     protocol,_=load_locked(path,args.digest,root=ROOT)
     if args.verify_only:

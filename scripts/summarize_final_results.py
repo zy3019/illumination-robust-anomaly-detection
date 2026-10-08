@@ -24,7 +24,7 @@ def main():
     parser.add_argument('--frozen-root', type=Path)
     args=parser.parse_args()
     if args.frozen_root:
-        ROOT = args.frozen_root.resolve()
+        ROOT = Path(os.path.abspath(args.frozen_root)).resolve()
     import scripts.run_final_matrix as runner
     runner.ROOT = ROOT
     protocol,_=load_locked(ROOT/args.protocol,args.digest,root=ROOT)

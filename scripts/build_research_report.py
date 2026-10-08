@@ -50,7 +50,7 @@ def mean_sd(row,key,scale=1,digits=4,signed=False):
 
 
 def main():
-    verify_report_inputs(ROOT)
+    accepted_inputs = verify_report_inputs(ROOT)
     acceptance=read('records/formal_v1/acceptance.json')
     assert acceptance['status']=='accepted' and acceptance['protocol_sha256']==SHA
     assert digest(FORMAL/'report.md')==acceptance['report_sha256']
@@ -155,7 +155,7 @@ def main():
     p(b,'Limitations include three categories, three seeds, small normal evaluation sets, synthetic brightness/contrast, direct square resizing, one backbone and a simplified coreset/scoring path. Development anomaly labels influenced the workflow. Post-hoc visual cases are explanatory, not causal or independently confirmed evidence. Clipping co-occurs with some errors, but zero-clipping cases also fail. New normalization, calibration or resolution hypotheses require a separately declared study and new independent evaluation data.')
     h(b,'8.1 Resources and reproducibility')
     p(b,'Accepted evaluation subprocesses total 46.94 minutes and 19.22 GiB of output. Peak CPU working set is 1.29 GiB; Torch peak allocated/reserved memory is 51.8/66.0 MiB, not whole-device usage. These costs exclude historical bank construction, interrupted attempts, extra audit work and waiting time. Job 40 was interrupted and repeated under the same protocol; 1,196 scores and 13 condition metrics matched exactly, excluding timing. Its first attempt remains archived in place.')
-    p(b,'Run from the repository root. Reproduction: docs/reproduction_v2.md. Frozen execution: docs/formal_execution.md. Protocol and acceptance: records/formal_v1/. Final tables: reports/formal_v1/. Reproduce diagnosis with .venv-audit/Scripts/python.exe -B scripts/analyze_final_failures.py. Report source and rendering instructions are in reports/research_report_v1/. No GPU inference is needed to rebuild this report. Exact input/output hashes accompany both analysis and report.')
+    p(b,'Run from the repository root. Reproduction: docs/reproduction_v2.md. Frozen execution: docs/formal_execution.md. Protocol and acceptance: records/formal_v1/. Final tables: reports/formal_v1/. Rebuild this editorial revision with .venv-docs/Scripts/python.exe scripts/build_research_report.py. Setup and independent rerun instructions are in docs/reproduction_v2.md. No GPU inference is needed to rebuild this report. Exact input/output hashes accompany both analysis and report.')
     h(b,'8.2 Contribution and tool disclosure')
     p(b,'The human project owner directed the project stages and authorized protocol locking, final testing and this analysis. Code, experimental execution, numerical checks, figures and this report were produced with AI assistance in the shared workspace. This is a project-level contribution record, not evidence that the owner independently implemented or reviewed every component. Personal authorship and understanding claims require the owner\'s own verification before external submission.')
     h(b,'References and local evidence')
@@ -222,6 +222,8 @@ def main():
     paths += [FAIL/name for name in ['provenance.json','paired_transitions.csv','interpretation.md','bottle_rescued_fp.png','metal_nut_persistent_fn.png','tile_introduced_fn.png']]
     paths += [ROOT/'scripts/build_research_report.py',ROOT/'records/formal_v1/protocol.json',ROOT/'records/manifests/mvtec_v1.json']
     paths += list((OUT/'figures').glob('*.png')) + [ROOT/'scripts/render_research_case_figures.py',FORMAL/'macro_severity_by_seed.csv']
+    paths += [ROOT/relative for relative in accepted_inputs['files_sha256']]
+    paths += [ROOT/'records/report_inputs_v1.json', ROOT/'scripts/report_integrity.py']
     evidence=dict(protocol_sha256=SHA,report_date='2026-10-08',pages=len(reader.pages),
                   inputs_sha256={p.relative_to(ROOT).as_posix():digest(p) for p in paths},
                   outputs_sha256={p.relative_to(ROOT).as_posix():digest(p) for p in [PDF,OUT/'report.md',OUT/'report_content.json']},

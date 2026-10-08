@@ -1,0 +1,17 @@
+{
+  "executable": "D:\\ChatGPT\\111_cleanroom\\.venv\\Scripts\\python.exe",
+  "prefix": "D:\\ChatGPT\\111_cleanroom\\.venv",
+  "base_prefix": "C:\\Python314",
+  "torch": "D:\\ChatGPT\\111_cleanroom\\.venv\\Lib\\site-packages\\torch\\__init__.py",
+  "numpy": "D:\\ChatGPT\\111_cleanroom\\.venv\\Lib\\site-packages\\numpy\\__init__.py",
+  "pillow": "D:\\ChatGPT\\111_cleanroom\\.venv\\Lib\\site-packages\\PIL\\__init__.py",
+  "sys_path": [
+    "",
+    "C:\\Python314\\python314.zip",
+    "C:\\Python314\\DLLs",
+    "C:\\Python314\\Lib",
+    "C:\\Python314",
+    "D:\\ChatGPT\\111_cleanroom\\.venv",
+    "D:\\ChatGPT\\111_cleanroom\\.venv\\Lib\\site-packages"
+  ]
+}

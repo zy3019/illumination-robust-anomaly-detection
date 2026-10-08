@@ -1,0 +1,6 @@
+{
+  "source_archive_sha256": "b1257943a1ee2147d6d3f30799820225efb755998da4bb1e899b507554cc10c5",
+  "source_commit": "499195e",
+  "dataset_source": "Local hash-verified cache copied as files; no links",
+  "environment": "New venv, newly installed locked wheels; no inherited site-packages"
+}

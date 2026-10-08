@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path, PurePosixPath
 import shutil
 import tempfile
@@ -24,7 +25,7 @@ def safe(root, relative):
 
 
 def export_bundle(source, output, digest):
-    source, output = Path(source).resolve(), Path(output).resolve()
+    source, output = (Path(os.path.abspath(p)).resolve() for p in (source,output))
     protocol_path = source/'records/formal_v1/protocol.json'
     if sha(protocol_path) != digest:
         raise ValueError('Protocol digest mismatch')
@@ -59,7 +60,7 @@ def export_bundle(source, output, digest):
 
 
 def restore_bundle(archive_path, digest, target):
-    archive_path, target = Path(archive_path).resolve(), Path(target).resolve()
+    archive_path, target = (Path(os.path.abspath(p)).resolve() for p in (archive_path,target))
     if target.exists():
         raise FileExistsError('Restore requires an absent destination: ' + str(target))
     if sha(archive_path) != digest:
