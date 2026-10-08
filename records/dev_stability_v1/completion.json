@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "final_test_evaluated": false,
+  "report": "reports/dev_stability_v1",
+  "model_count": 90,
+  "new_model_count": 66,
+  "sources_sha256": {
+    "scripts/summarize_dev_stability.py": "b2b3a0d959e847bb112444881f3abed7473ec5a83091ef3178cbfde33c02e014",
+    "scripts/development_statistics.py": "f47baf654ff153e57664dfc097d58a029b566755da0f78f25812cbf1cac17a52",
+    "scripts/render_dev_stability.py": "6c88d20202595fae83e8e0b5ba833736848c66cc076c41490d9abe8f6e6d036c"
+  },
+  "matrix_status_sha256": {
+    "dev_matrix_v1": "dcc1dc19526c2675458dcbbefcb17bbf0fa74e021d1391451bc64ebe571731cc",
+    "dev_ab_extra_seeds_v1": "aae58ae654fa36260950ebffa0971fdebacb0ece6bb07eda05713265d5222521",
+    "dev_c_ablation_v1": "a907852baf64173e98d0e4eb5d832fccb3711679e68720012ad5ca5db72f0d26"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "analysis_type": "post-hoc descriptive diagnosis, not a new confirmatory test",
+  "models": 90,
+  "scoring_events": 98280,
+  "independent_images": 252,
+  "error_events": 7035,
+  "fp_events": 2368,
+  "fn_events": 4667,
+  "paired_comparisons": 39312,
+  "selected_cases": 18,
+  "missing_roles": []
+}

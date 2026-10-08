@@ -1,0 +1,44 @@
+[
+  {
+    "job": "bottle_n5_A_seed17",
+    "condition": "clean",
+    "reference": 0.9797555942460876,
+    "saved": 0.9797555942460876,
+    "absolute_difference": 0.0
+  },
+  {
+    "job": "bottle_n5_A_seed17",
+    "condition": "brightness_0.5",
+    "reference": 0.9737095042206285,
+    "saved": 0.9737095042206285,
+    "absolute_difference": 0.0
+  },
+  {
+    "job": "metal_nut_n5_A_seed17",
+    "condition": "clean",
+    "reference": 0.9669286046620373,
+    "saved": 0.9669286046620373,
+    "absolute_difference": 0.0
+  },
+  {
+    "job": "metal_nut_n5_A_seed17",
+    "condition": "brightness_0.5",
+    "reference": 0.9618142436081003,
+    "saved": 0.9618142436081003,
+    "absolute_difference": 0.0
+  },
+  {
+    "job": "tile_n5_A_seed17",
+    "condition": "clean",
+    "reference": 0.938408513374867,
+    "saved": 0.938408513374867,
+    "absolute_difference": 0.0
+  },
+  {
+    "job": "tile_n5_A_seed17",
+    "condition": "brightness_0.5",
+    "reference": 0.9314391866663212,
+    "saved": 0.9314391866663212,
+    "absolute_difference": 0.0
+  }
+]

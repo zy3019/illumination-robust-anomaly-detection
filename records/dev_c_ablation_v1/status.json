@@ -1,0 +1,169 @@
+{
+  "started_at": "2026-10-06T18:18:39.200644+08:00",
+  "jobs": {
+    "bottle_n5_C_seed42": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/bottle_n5_C_seed42_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/bottle_n5_C_seed42_attempt01.log",
+      "process_wall_seconds": 23.050694300000032,
+      "artifact_bytes": 49400214,
+      "summary_sha256": "0e027cc2d53f74a29946b03e4866d97a292036033a5ad1e1a6283376ea3b2b3e"
+    },
+    "bottle_n5_C_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/bottle_n5_C_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/bottle_n5_C_seed17_attempt01.log",
+      "process_wall_seconds": 22.675144699998782,
+      "artifact_bytes": 49418803,
+      "summary_sha256": "6cb9ba5a34bdea5202731dc5c3fd7787fbe762fbb2fe186eeb0a57a864791f2a"
+    },
+    "bottle_n5_C_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/bottle_n5_C_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/bottle_n5_C_seed2026_attempt01.log",
+      "process_wall_seconds": 21.45839909999995,
+      "artifact_bytes": 49403710,
+      "summary_sha256": "ff95b0e24c8f3f518613cc4721ac234cefcf677e58529233383c4da890e50d30"
+    },
+    "bottle_n25_C_seed42": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/bottle_n25_C_seed42_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/bottle_n25_C_seed42_attempt01.log",
+      "process_wall_seconds": 21.783839100000478,
+      "artifact_bytes": 49500743,
+      "summary_sha256": "a7706d1e2c81413cb304b5ce64420da63244ca3c3c8e1399dda628f8ede31a06"
+    },
+    "bottle_n25_C_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/bottle_n25_C_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/bottle_n25_C_seed17_attempt01.log",
+      "process_wall_seconds": 23.384686100002,
+      "artifact_bytes": 49483989,
+      "summary_sha256": "e5d4e77962e5179a8d94a5836859c9c0906aa417af57bec41260c7ca3723cf9c"
+    },
+    "bottle_n25_C_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/bottle_n25_C_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/bottle_n25_C_seed2026_attempt01.log",
+      "process_wall_seconds": 23.032209400000283,
+      "artifact_bytes": 49529858,
+      "summary_sha256": "a79c7c26d633b1bc096ec82c830ee5c7d616b1f9e3e454b7b563beb24c3dca53"
+    },
+    "metal_nut_n5_C_seed42": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/metal_nut_n5_C_seed42_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/metal_nut_n5_C_seed42_attempt01.log",
+      "process_wall_seconds": 23.032540500000323,
+      "artifact_bytes": 70826029,
+      "summary_sha256": "22772393b4419aa58a3c8bceb7fbb63bbc8da29fb96f390faacf1507c3fd2bbe"
+    },
+    "metal_nut_n5_C_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/metal_nut_n5_C_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/metal_nut_n5_C_seed17_attempt01.log",
+      "process_wall_seconds": 22.812989000001835,
+      "artifact_bytes": 70833871,
+      "summary_sha256": "032792c487032c05b9b00639e9912e7315fe329b1884d4d5e22c67ea30a83f64"
+    },
+    "metal_nut_n5_C_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/metal_nut_n5_C_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/metal_nut_n5_C_seed2026_attempt01.log",
+      "process_wall_seconds": 24.31222820000039,
+      "artifact_bytes": 70823845,
+      "summary_sha256": "57a4774b5e8de0f2cad3e9f1bec95e7c00d00bf32042ae5cf8f1ff16b76f635d"
+    },
+    "metal_nut_n25_C_seed42": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/metal_nut_n25_C_seed42_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/metal_nut_n25_C_seed42_attempt01.log",
+      "process_wall_seconds": 26.455778499999724,
+      "artifact_bytes": 70880559,
+      "summary_sha256": "33f8546f9bf19237775c6c479235cb794eb269dc4f90fc89714ed70b49884384"
+    },
+    "metal_nut_n25_C_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/metal_nut_n25_C_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/metal_nut_n25_C_seed17_attempt01.log",
+      "process_wall_seconds": 26.80989540000155,
+      "artifact_bytes": 70890183,
+      "summary_sha256": "e7689e00ebcd85c233928f227ef70fda5bb2f932c4f3947a78359cde24d14a3d"
+    },
+    "metal_nut_n25_C_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/metal_nut_n25_C_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/metal_nut_n25_C_seed2026_attempt01.log",
+      "process_wall_seconds": 26.423198700002104,
+      "artifact_bytes": 70879202,
+      "summary_sha256": "742e5db3a31997efcf4ae540c06820a2d673469a668646b1bb58bcc9c19eefc8"
+    },
+    "tile_n5_C_seed42": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/tile_n5_C_seed42_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/tile_n5_C_seed42_attempt01.log",
+      "process_wall_seconds": 33.58301319999737,
+      "artifact_bytes": 78248912,
+      "summary_sha256": "0f054e88514c8199a4e587156cf9f82507917f95edb4766a4911a43b60fca467"
+    },
+    "tile_n5_C_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/tile_n5_C_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/tile_n5_C_seed17_attempt01.log",
+      "process_wall_seconds": 36.85748160000003,
+      "artifact_bytes": 78249097,
+      "summary_sha256": "a63b788586b11a22608b40594739642d533c884b4c33aed164536fcc13579993"
+    },
+    "tile_n5_C_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/tile_n5_C_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/tile_n5_C_seed2026_attempt01.log",
+      "process_wall_seconds": 39.94599240000025,
+      "artifact_bytes": 78248871,
+      "summary_sha256": "598930a4710109ff2b0f0e2de81534109a06f411edab8f22cac6cf178060a363"
+    },
+    "tile_n25_C_seed42": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/tile_n25_C_seed42_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/tile_n25_C_seed42_attempt01.log",
+      "process_wall_seconds": 41.66739249999955,
+      "artifact_bytes": 78255101,
+      "summary_sha256": "51d419cc7360a04b6d54f38c5b34088cb8a1efbbe65527d6d815054dc231ae75"
+    },
+    "tile_n25_C_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/tile_n25_C_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/tile_n25_C_seed17_attempt01.log",
+      "process_wall_seconds": 39.67416930000036,
+      "artifact_bytes": 78254085,
+      "summary_sha256": "39f391d618bd564e52d380bcb9ee49eef24f86f46183091011dc6c9485f076ed"
+    },
+    "tile_n25_C_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_c_ablation_v1/tile_n25_C_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_c_ablation_v1/tile_n25_C_seed2026_attempt01.log",
+      "process_wall_seconds": 40.54227879999962,
+      "artifact_bytes": 78254745,
+      "summary_sha256": "da525cb752cc43bb3be26bedfa268841666d8da1af9bea53a14f1f587b120aa9"
+    }
+  },
+  "status": "complete",
+  "finished_at": "2026-10-06T18:27:20.141835+08:00"
+}

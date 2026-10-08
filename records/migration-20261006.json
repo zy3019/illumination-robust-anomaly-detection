@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "source_compatibility_junction": "C:\\Users\\LENOVO\\Documents\\ChatGPT\\111",
+  "destination": "D:\\ChatGPT\\111",
+  "verified_file_count": 52744,
+  "verified_bytes": 12915713146,
+  "c_free_before": 49202917376,
+  "c_free_after": 62247272448,
+  "observed_c_free_increase": 13044355072,
+  "tests": "7 unit tests; main CUDA; Anomalib import",
+  "adjusted_path": "D:\\ChatGPT\\111\\.venv-audit\\Lib\\site-packages\\project_runtime.pth",
+  "manifest": "D:\\ChatGPT\\111-migration-20261006.json",
+  "note": "Base Python remains C:\\Python314. Old absolute launchers remain usable through the junction."
+}

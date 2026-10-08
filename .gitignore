@@ -1,0 +1,16 @@
+.venv/
+.venv-audit/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+data/
+outputs/
+checkpoints/
+tmp/
+dist/
+.venv-*/
+*.pt
+*.pth
+.env
+.env.*
+!.env.example

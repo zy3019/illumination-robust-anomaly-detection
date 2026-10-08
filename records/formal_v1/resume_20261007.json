@@ -1,0 +1,8 @@
+{
+  "policy": "Retain attempt01; resume pinned protocol with full completed-output verification",
+  "observed_at": "2026-10-07T20:41:58.0814823+08:00",
+  "event": "resume_after_interruption",
+  "interrupted_job": "metal_nut_n10_A_seed17",
+  "stale_scheduler_pid": 23252,
+  "completed_jobs": 39
+}

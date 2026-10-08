@@ -1,0 +1,15 @@
+{
+  "analysis_type": "post-hoc descriptive diagnosis, not a new confirmatory test",
+  "coverage": "all 90 accepted models; all 13 conditions; all 252 independent final images",
+  "roles": {
+    "persistent_fp": "A/B均误报",
+    "rescued_fp": "B纠正A误报",
+    "introduced_fp": "B新增误报",
+    "persistent_fn": "A/B均漏检",
+    "rescued_fn": "B纠正A漏检",
+    "introduced_fn": "B新增漏检"
+  },
+  "selection": "One A/B example per category and role; first maximize recurrence across three seeds; then prefer stress conditions; FP budget order all,25,10,5; FN budget order 5,10,25,all; then frozen condition order, image path, seed ascending. No substitute if empty.",
+  "heatmaps": "Saved bilinear maps divided by each model own image threshold; common color scale within each panel; not probabilities or pixel segmentation decisions. Image scores use raw patch maxima and may differ from interpolated map maxima.",
+  "missing_roles": []
+}

@@ -1,0 +1,53 @@
+{
+  "status": "development_only",
+  "model_count": 90,
+  "new_model_count": 66,
+  "seed_count": 3,
+  "condition_rows": 1170,
+  "scored_views": 24570,
+  "independent_dev_images": 63,
+  "final_test_evaluated": false,
+  "seeds": [
+    17,
+    42,
+    2026
+  ],
+  "counts": {
+    "bottle": {
+      "dev": 16,
+      "calibration": 42,
+      "train_pool": 167,
+      "final_test": 67
+    },
+    "metal_nut": {
+      "dev": 23,
+      "calibration": 44,
+      "train_pool": 176,
+      "final_test": 92
+    },
+    "tile": {
+      "dev": 24,
+      "calibration": 46,
+      "train_pool": 184,
+      "final_test": 93
+    }
+  },
+  "new_process_wall_seconds": 1873.475977400005,
+  "all_process_wall_seconds": 2311.781788099979,
+  "new_artifact_bytes": 4369996772,
+  "all_artifact_bytes": 5959208175,
+  "max_cpu_gib": 4.016944885253906,
+  "max_torch_allocated_mib": 439.38037109375,
+  "max_torch_reserved_mib": 460.0,
+  "formal_projected_seconds": 6586.082446599934,
+  "formal_planning_seconds": 9879.123669899902,
+  "formal_projected_bytes": 23821647754.125,
+  "projection_note": "Uses actual A/B/C build timings; scales evaluation by final/dev image count; heuristic 50% time buffer; excludes AU-PRO, manual analysis and reruns.",
+  "checks": [
+    "Same core, manifest, weights and fixed configuration across matrices",
+    "90 expected jobs, nested training budgets, A/B/C samples and B/C augmentation pairing",
+    "1000-vector capacity; all 13 conditions; independent image AUROC and confusion-count checks",
+    "Calibration thresholds reconstructed; final evaluation absent",
+    "Per-category and macro statistics computed across three seeds with ddof=1"
+  ]
+}

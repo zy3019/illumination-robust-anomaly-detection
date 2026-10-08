@@ -1,0 +1,40 @@
+{
+  "manifest_sha256": "058d97eb3261ff4c7ad12c63931ab0c41e82012230907c9ba1c70433928bb6f6",
+  "split": "dev",
+  "definition": "fraction of pixels with any RGB channel outside [0,1] before clamp; equality at 0/1 is not clipping",
+  "representative_rule": "first lexicographic dev path per defect type, including good",
+  "note": "Clipping does not by itself establish loss of defect visibility. No condition removed.",
+  "representatives": [
+    {
+      "category": "bottle",
+      "representatives": [
+        "bottle/test/broken_large/001.png",
+        "bottle/test/broken_small/002.png",
+        "bottle/test/contamination/006.png",
+        "bottle/test/good/006.png"
+      ]
+    },
+    {
+      "category": "metal_nut",
+      "representatives": [
+        "metal_nut/test/bent/002.png",
+        "metal_nut/test/color/008.png",
+        "metal_nut/test/flip/001.png",
+        "metal_nut/test/good/000.png",
+        "metal_nut/test/scratch/000.png"
+      ]
+    },
+    {
+      "category": "tile",
+      "representatives": [
+        "tile/test/crack/006.png",
+        "tile/test/glue_strip/004.png",
+        "tile/test/good/001.png",
+        "tile/test/gray_stroke/005.png",
+        "tile/test/oil/003.png",
+        "tile/test/rough/002.png"
+      ]
+    }
+  ],
+  "diagnostic_rows": 819
+}

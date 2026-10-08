@@ -1,0 +1,14 @@
+{
+  "job": "metal_nut_n10_A_seed17",
+  "old_attempt_complete": false,
+  "reason": "attempt01 missing integrity.json and scheduler completion record",
+  "score_rows_compared": 1196,
+  "scores_labels_thresholds_predictions_exact": true,
+  "condition_metrics_exact": true,
+  "excluded_comparison_fields": [
+    "seconds",
+    "inference_seconds_median"
+  ],
+  "accepted_attempt": 2,
+  "selection_reason": "technical interruption, not performance selection"
+}

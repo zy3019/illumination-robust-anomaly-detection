@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "checked_at": "2026-10-07T22:05:26.812855+08:00",
+  "protocol_sha256": "58efbb9a2e54a4e276d062235f141f687a0aeaa84f26e48eb34cfe34b82a6885",
+  "locked_inputs_reverified": true,
+  "models": 90,
+  "metric_rows": 1170,
+  "score_rows": 98280,
+  "independent_final_images": 252,
+  "pixel_audits_exact": 6,
+  "figures_visually_reviewed": [
+    "paired_effects.png",
+    "seed_stability.png",
+    "view_ablation.png"
+  ],
+  "figure_notes": "Legible labels and legends; mean/sample-SD specified; independent subplot scales and unbounded SD bars disclosed in findings.",
+  "attempts": {
+    "accepted_attempt01": 89,
+    "accepted_attempt02": 1,
+    "interrupted_attempt_retained": true
+  },
+  "interrupted_attempt_artifact_bytes": 249488216,
+  "files_sha256": {
+    "reports/formal_v1/report.md": "d84d1704c50c9169066d2bb2c5c55563b55903010d5e60c4b4a6ab7b66f84ef0",
+    "reports/formal_v1/findings.md": "817dc971f04b902993d086c45406d2d293a71cfe7d4aa28c90cbe6c61349fa71",
+    "reports/formal_v1/paired_effects.png": "8b8aa2ae809beeac40fde093a9c157c59427260317bf92f64d94aaa9e4d63b3d",
+    "reports/formal_v1/seed_stability.png": "4e92d876cda03fb280a4c59a2cab2d15536e456c17c1038d8a8add488ed4810c",
+    "reports/formal_v1/view_ablation.png": "9037d693284fb6a711fa269562bccfbe564232f973ae7b9a4499e015de1e46f2",
+    "reports/formal_v1/overview.json": "e6e3542ff3eb5fa0c3fe9baefdbc45ca920481be09da4cf8515fb44ac3fc35c9",
+    "reports/formal_v1/pixel_audit.json": "e15d6b01607ff7d349d567986e6edca31523e05d3740b999c0eb0276645b11dc",
+    "reports/formal_v1/provenance.json": "d1b40dea4e757b387dd597c2e5b3b2b2b141ab9283daad9c37f924700f99ab06",
+    "README.md": "bc2f8324bf25f2367286438dfb49a12e0e4ca9e5377fe3b62b07a13b29279179",
+    "docs/formal_execution.md": "bea463b999595fbaf0a40349d35529849aa2a7b68f29b169ca89ba9f9f8c6f9a",
+    "records/progress.md": "58605bd60be0edb65bc214515d7b0310845852999e2074a5b410b17038d60854",
+    "records/formal_v1/acceptance.json": "8385ec14eb83e98285df77c7ed3fb334ba27faecfb06fb02f3b892104daed26a",
+    "records/formal_v1/resume_20261007.json": "3f224304f33cc3cb1f709b30129e94b300d5692f26e4dffecbd5658545148311",
+    "records/formal_v1/resume_score_check.json": "052dbc3b942f2de7c23935f5bde971071345e9bbbc16af1e149a344342b49569"
+  }
+}

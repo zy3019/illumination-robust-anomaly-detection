@@ -1,0 +1,439 @@
+{
+  "started_at": "2026-10-06T17:55:51.323957+08:00",
+  "jobs": {
+    "bottle_n5_A_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_n5_A_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_n5_A_seed17_attempt01.log",
+      "process_wall_seconds": 15.851524099998642,
+      "artifact_bytes": 49377926,
+      "summary_sha256": "0cd334176ef7b7a2ac7e88c7a03089e9ff17ac7109bc8601422cb27eb3e3c57d"
+    },
+    "bottle_n5_B_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_n5_B_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_n5_B_seed17_attempt01.log",
+      "process_wall_seconds": 15.356915399999707,
+      "artifact_bytes": 49424957,
+      "summary_sha256": "d84f4f8bca43641e2f59436e94653b5fce16d93a35c34038532d4077d3a143bc"
+    },
+    "bottle_n5_A_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_n5_A_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_n5_A_seed2026_attempt01.log",
+      "process_wall_seconds": 15.29197750000094,
+      "artifact_bytes": 49363321,
+      "summary_sha256": "31ff2d9aca4928e27a37ea85e8c5a3613e8194477526e945ff5207c828d2160c"
+    },
+    "bottle_n5_B_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_n5_B_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_n5_B_seed2026_attempt01.log",
+      "process_wall_seconds": 21.360803299998224,
+      "artifact_bytes": 49407394,
+      "summary_sha256": "20de77ac725dd74ef1979220d62469dd6028049c9df7826f0f1e9030dd5524eb"
+    },
+    "bottle_n10_A_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_n10_A_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_n10_A_seed17_attempt01.log",
+      "process_wall_seconds": 21.558433300000615,
+      "artifact_bytes": 49407501,
+      "summary_sha256": "755e3fc8c8c2d747a467589d50d8ace7aa08cff67d01e876d0cc776045d4d264"
+    },
+    "bottle_n10_B_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_n10_B_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_n10_B_seed17_attempt01.log",
+      "process_wall_seconds": 21.246491600002628,
+      "artifact_bytes": 49451409,
+      "summary_sha256": "cf7fab9a3832ce791fa02cc5d0ceb2588a292b08ea7e4e4545476490f52ccae6"
+    },
+    "bottle_n10_A_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_n10_A_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_n10_A_seed2026_attempt01.log",
+      "process_wall_seconds": 21.31176670000059,
+      "artifact_bytes": 49429607,
+      "summary_sha256": "afecaeae2e7c6ee0ff282723c00af689ad0d559339c350499531c413fb755b38"
+    },
+    "bottle_n10_B_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_n10_B_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_n10_B_seed2026_attempt01.log",
+      "process_wall_seconds": 22.017851199998404,
+      "artifact_bytes": 49454897,
+      "summary_sha256": "e519276919b4c61a3f6b8baa9250239f61beda083902ec1a497ec18be70d37c9"
+    },
+    "bottle_n25_A_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_n25_A_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_n25_A_seed17_attempt01.log",
+      "process_wall_seconds": 22.645469800001592,
+      "artifact_bytes": 49453709,
+      "summary_sha256": "6aa6d4fcc7d3cceeb4449444e4411f2385549b3903cb91f56089affa4efd2de5"
+    },
+    "bottle_n25_B_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_n25_B_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_n25_B_seed17_attempt01.log",
+      "process_wall_seconds": 22.05477620000238,
+      "artifact_bytes": 49490460,
+      "summary_sha256": "817dcba2c00569e6f5d2b0a1ad5ccc85ab78ea4c78ab9821c36d0ebafeb6833c"
+    },
+    "bottle_n25_A_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_n25_A_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_n25_A_seed2026_attempt01.log",
+      "process_wall_seconds": 19.749571899999864,
+      "artifact_bytes": 49508939,
+      "summary_sha256": "12bf50ae90d520330e58c994e7e60b36fa7eaff46b4b41a2ab05b69b26323387"
+    },
+    "bottle_n25_B_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_n25_B_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_n25_B_seed2026_attempt01.log",
+      "process_wall_seconds": 20.135162200000195,
+      "artifact_bytes": 49536974,
+      "summary_sha256": "76326a9899aafbc5a16a51d480aa15cfa27cc4e407b6d7ac4168c6bacc8a5e4c"
+    },
+    "bottle_nall_A_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_nall_A_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_nall_A_seed17_attempt01.log",
+      "process_wall_seconds": 26.516405299997132,
+      "artifact_bytes": 49604764,
+      "summary_sha256": "fe66c7bfe4f501b1c2141b3f14e65058299123df21964c42287ffba6e4b80dc7"
+    },
+    "bottle_nall_B_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_nall_B_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_nall_B_seed17_attempt01.log",
+      "process_wall_seconds": 31.782826300001034,
+      "artifact_bytes": 49666623,
+      "summary_sha256": "2310cac483e248ab3b3ad9c9737cc250ac8437cfe9cc727496685538d5baba7e"
+    },
+    "bottle_nall_A_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_nall_A_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_nall_A_seed2026_attempt01.log",
+      "process_wall_seconds": 25.784623499999725,
+      "artifact_bytes": 49590980,
+      "summary_sha256": "887723decf8e185ec64d617c37fe3d27da533e01cdfc9df89d114a54926e635d"
+    },
+    "bottle_nall_B_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/bottle_nall_B_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/bottle_nall_B_seed2026_attempt01.log",
+      "process_wall_seconds": 33.312898699998186,
+      "artifact_bytes": 49666858,
+      "summary_sha256": "81cb23c65c674aab62d76b329e6768b32d9a3d7037bab60b0d9954e196b3d831"
+    },
+    "metal_nut_n5_A_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_n5_A_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_n5_A_seed17_attempt01.log",
+      "process_wall_seconds": 24.287889699997322,
+      "artifact_bytes": 70834412,
+      "summary_sha256": "3cb05a7ce86f6e5f760ff8d4893023b382396dac3bf74a5e6e8c604f9a2f3ae4"
+    },
+    "metal_nut_n5_B_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_n5_B_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_n5_B_seed17_attempt01.log",
+      "process_wall_seconds": 22.820064999999886,
+      "artifact_bytes": 70836755,
+      "summary_sha256": "4481ae1137a12abab7e374741a092a67b9c222b2db67cb99911d3274fb50ef6d"
+    },
+    "metal_nut_n5_A_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_n5_A_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_n5_A_seed2026_attempt01.log",
+      "process_wall_seconds": 24.56044380000094,
+      "artifact_bytes": 70829153,
+      "summary_sha256": "7b894fc416a8ff4e4993c885daa5e72fae73e304d21ffebff7c9dd4735f5ede7"
+    },
+    "metal_nut_n5_B_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_n5_B_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_n5_B_seed2026_attempt01.log",
+      "process_wall_seconds": 24.44092829999863,
+      "artifact_bytes": 70833125,
+      "summary_sha256": "ced18b8880beecf4da525897fc8c74b7dee88493630d8f813c582ad0564bdda5"
+    },
+    "metal_nut_n10_A_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_n10_A_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_n10_A_seed17_attempt01.log",
+      "process_wall_seconds": 25.281694500001322,
+      "artifact_bytes": 70850599,
+      "summary_sha256": "8cbd1231a400ad8f193c759b6f026739560815a5ab462a7c459fcb2335e77c9b"
+    },
+    "metal_nut_n10_B_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_n10_B_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_n10_B_seed17_attempt01.log",
+      "process_wall_seconds": 28.315390699997806,
+      "artifact_bytes": 70868627,
+      "summary_sha256": "89b10e0e2b2f38dd09278b3d2f1cd168e37f9d883af6ca5bcb94ba485d5bdd18"
+    },
+    "metal_nut_n10_A_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_n10_A_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_n10_A_seed2026_attempt01.log",
+      "process_wall_seconds": 23.92379449999862,
+      "artifact_bytes": 70865086,
+      "summary_sha256": "f86ea424c4d220a19693153b4e814c6818ad6f2f1b054430e4fd484c7fbba91d"
+    },
+    "metal_nut_n10_B_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_n10_B_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_n10_B_seed2026_attempt01.log",
+      "process_wall_seconds": 22.821762200001103,
+      "artifact_bytes": 70863669,
+      "summary_sha256": "2dba4d0f20caa4e63f3e1d2868e955656718987870a9905fb25fb191de908ec8"
+    },
+    "metal_nut_n25_A_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_n25_A_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_n25_A_seed17_attempt01.log",
+      "process_wall_seconds": 25.18883519999872,
+      "artifact_bytes": 70892438,
+      "summary_sha256": "1cff328f14434bb6fae6a9efc12ec030bef572dc4112735f35f7f7f9b86852b3"
+    },
+    "metal_nut_n25_B_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_n25_B_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_n25_B_seed17_attempt01.log",
+      "process_wall_seconds": 24.736529400001018,
+      "artifact_bytes": 70895885,
+      "summary_sha256": "ad2f24cf7a5c954e6875bddf467333bb78812ddf432700f86d7172d26788b737"
+    },
+    "metal_nut_n25_A_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_n25_A_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_n25_A_seed2026_attempt01.log",
+      "process_wall_seconds": 24.41607060000024,
+      "artifact_bytes": 70885847,
+      "summary_sha256": "1a385af7cac1521a8a286b4d599e4977871bc8f1bcb758be0f426adc052c6205"
+    },
+    "metal_nut_n25_B_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_n25_B_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_n25_B_seed2026_attempt01.log",
+      "process_wall_seconds": 26.468382299997756,
+      "artifact_bytes": 70897558,
+      "summary_sha256": "44fd03c8655c2b59566bb211d604c485f2411cc578de15419bdc41f2cf7f9c98"
+    },
+    "metal_nut_nall_A_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_nall_A_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_nall_A_seed17_attempt01.log",
+      "process_wall_seconds": 32.859800899997936,
+      "artifact_bytes": 70952880,
+      "summary_sha256": "28efd9a4436be8b685bed59ab1f1e7b5fb62e4d0b2a312981d3acdac09e2d835"
+    },
+    "metal_nut_nall_B_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_nall_B_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_nall_B_seed17_attempt01.log",
+      "process_wall_seconds": 41.05096770000091,
+      "artifact_bytes": 71038349,
+      "summary_sha256": "9e69ae746c2444bb44cf29126011e6276978031f05c0a4efd7f16bbe00723009"
+    },
+    "metal_nut_nall_A_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_nall_A_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_nall_A_seed2026_attempt01.log",
+      "process_wall_seconds": 31.77545480000117,
+      "artifact_bytes": 70963889,
+      "summary_sha256": "4cc7b93a77275d5ee685355ce2b046db676ba70da1fd0dca08d2bb41e20f63f6"
+    },
+    "metal_nut_nall_B_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/metal_nut_nall_B_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/metal_nut_nall_B_seed2026_attempt01.log",
+      "process_wall_seconds": 40.727814200003195,
+      "artifact_bytes": 71035836,
+      "summary_sha256": "3b446a6ce78665b4d0417bccc5885126f4fbf9b8354baf1c9da6fb6d23f5c92e"
+    },
+    "tile_n5_A_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_n5_A_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_n5_A_seed17_attempt01.log",
+      "process_wall_seconds": 32.77625070000067,
+      "artifact_bytes": 78248384,
+      "summary_sha256": "26c99f7fc42562940a49196d8b1336bbe3ab9a5ada53e7e986a9cb271c907210"
+    },
+    "tile_n5_B_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_n5_B_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_n5_B_seed17_attempt01.log",
+      "process_wall_seconds": 31.845161400000507,
+      "artifact_bytes": 78250801,
+      "summary_sha256": "79e266184d35cf3a978102f4ac3a25ff2b00f3817279f250397d40b03d330a2e"
+    },
+    "tile_n5_A_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_n5_A_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_n5_A_seed2026_attempt01.log",
+      "process_wall_seconds": 31.01877030000105,
+      "artifact_bytes": 78249632,
+      "summary_sha256": "44ceae738aa1e90fa7e07f3c85b6f95063419b82223442dfee3a3a3aadf27ce1"
+    },
+    "tile_n5_B_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_n5_B_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_n5_B_seed2026_attempt01.log",
+      "process_wall_seconds": 30.890659499997128,
+      "artifact_bytes": 78252369,
+      "summary_sha256": "b0c6b722076477971368ef987261efb41416b84e46efc8d0b83f16c42ef1eba5"
+    },
+    "tile_n10_A_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_n10_A_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_n10_A_seed17_attempt01.log",
+      "process_wall_seconds": 29.857910800001264,
+      "artifact_bytes": 78248527,
+      "summary_sha256": "54655229e31dafdcfdc45499a7678f4c2a93bcd51391f93e68ada4606eb775ea"
+    },
+    "tile_n10_B_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_n10_B_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_n10_B_seed17_attempt01.log",
+      "process_wall_seconds": 30.339981299999636,
+      "artifact_bytes": 78253740,
+      "summary_sha256": "36d6321a953e7afcb4dd2cfc24e83e68c814f54362fa76cfe62616a2f17a69de"
+    },
+    "tile_n10_A_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_n10_A_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_n10_A_seed2026_attempt01.log",
+      "process_wall_seconds": 31.794656199999736,
+      "artifact_bytes": 78246364,
+      "summary_sha256": "91d361c5b672c74a5eece3df263b4e1f71dc7e5a640ea139e39bb5d45f376af3"
+    },
+    "tile_n10_B_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_n10_B_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_n10_B_seed2026_attempt01.log",
+      "process_wall_seconds": 31.04570270000113,
+      "artifact_bytes": 78251226,
+      "summary_sha256": "32d93fc94b9a8b3c0515e5c7b77c62a1801c0790ad720b78bbd20b4d587ab3e2"
+    },
+    "tile_n25_A_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_n25_A_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_n25_A_seed17_attempt01.log",
+      "process_wall_seconds": 32.754289000000426,
+      "artifact_bytes": 78250677,
+      "summary_sha256": "0063fcd9fe1db673c9d5fa643622c14da75b7642af508d9f20112ec0110b1bc2"
+    },
+    "tile_n25_B_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_n25_B_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_n25_B_seed17_attempt01.log",
+      "process_wall_seconds": 32.73764479999954,
+      "artifact_bytes": 78261420,
+      "summary_sha256": "83089a441608dce15b05c2532f78847474e184b3b6ba09d0f0a51e4316364731"
+    },
+    "tile_n25_A_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_n25_A_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_n25_A_seed2026_attempt01.log",
+      "process_wall_seconds": 30.176993699999002,
+      "artifact_bytes": 78251939,
+      "summary_sha256": "0db11b98bc2623188b0e534d50fb2f05bc0b3d0d7e992e5a4d5f5d1766001f93"
+    },
+    "tile_n25_B_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_n25_B_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_n25_B_seed2026_attempt01.log",
+      "process_wall_seconds": 32.019535800001904,
+      "artifact_bytes": 78260844,
+      "summary_sha256": "18fe691490d6f1dc7326d514713a801b15417b530779a02d28afe28e97c15eee"
+    },
+    "tile_nall_A_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_nall_A_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_nall_A_seed17_attempt01.log",
+      "process_wall_seconds": 44.45271800000046,
+      "artifact_bytes": 78316831,
+      "summary_sha256": "6646b79d35defabc43ea7d780e5bddea13f7c2e04b39a6c2eb37b93274951ca6"
+    },
+    "tile_nall_B_seed17": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_nall_B_seed17_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_nall_B_seed17_attempt01.log",
+      "process_wall_seconds": 47.41217260000121,
+      "artifact_bytes": 78387905,
+      "summary_sha256": "7df8312d0d4cf41f83e8a793d09671cc1ea43042401b576c7d12fc8ca51a1e08"
+    },
+    "tile_nall_A_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_nall_A_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_nall_A_seed2026_attempt01.log",
+      "process_wall_seconds": 37.5247182000021,
+      "artifact_bytes": 78314877,
+      "summary_sha256": "d54a7de0c4001ca51d48f10a0ba26868d3db5cfdb324826849112639318450ed"
+    },
+    "tile_nall_B_seed2026": {
+      "status": "complete",
+      "output": "outputs/dev_ab_extra_seeds_v1/tile_nall_B_seed2026_attempt01",
+      "attempt": 1,
+      "log": "outputs/dev_ab_extra_seeds_v1/tile_nall_B_seed2026_attempt01.log",
+      "process_wall_seconds": 49.673560799998086,
+      "artifact_bytes": 78388992,
+      "summary_sha256": "2cb471deb3f4c341ab456c5b4d210850016f563f2ec5dc42ab83f6a5457a8eed"
+    }
+  },
+  "status": "complete",
+  "finished_at": "2026-10-06T18:18:34.353118+08:00"
+}

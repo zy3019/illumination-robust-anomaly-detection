@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-08",
+  "protocol_sha256": "58efbb9a2e54a4e276d062235f141f687a0aeaa84f26e48eb34cfe34b82a6885",
+  "locked_inputs_verified": true,
+  "jobs_metadata_and_scores_verified": 90,
+  "hashed_metadata_and_integrity_files": 900,
+  "score_rows": 98280,
+  "metric_rows": 1170,
+  "earlier_full_output_hash_check": {
+    "jobs_completed": 15,
+    "files_verified": 13980,
+    "selection": "First 15 protocol jobs; bottle budgets 5 and 10, all methods/seeds for those budgets",
+    "remaining_maps": "Not individually rehashed in this review"
+  },
+  "errors": {
+    "FN": 4667,
+    "FP": 2368
+  },
+  "paired_summary_rows_recomputed": 40,
+  "research_report_inputs_and_outputs_hashes_verified": true,
+  "existing_unit_tests_passed": 16,
+  "metric_boundary_reproductions": {
+    "flat": {
+      "image_auroc": 1.0,
+      "false_positives": 0,
+      "normal_images": 1,
+      "true_positives": 1,
+      "anomalous_images": 1,
+      "fpr": 0.0,
+      "recall": 1.0
+    },
+    "broadcast": {
+      "image_auroc": 1.0,
+      "false_positives": 1,
+      "normal_images": 1,
+      "true_positives": 1,
+      "anomalous_images": 1,
+      "fpr": 1.0,
+      "recall": 1.0
+    },
+    "nan_threshold": {
+      "image_auroc": 1.0,
+      "false_positives": 0,
+      "normal_images": 1,
+      "true_positives": 0,
+      "anomalous_images": 1,
+      "fpr": 0.0,
+      "recall": 0.0
+    }
+  },
+  "limitations": [
+    "No GPU inference rerun",
+    "Pixel AUROC not recomputed; only first 15 jobs had all map files rehashed",
+    "No fresh environment or clean clone installation performed",
+    "No PDF visual re-review"
+  ]
+}

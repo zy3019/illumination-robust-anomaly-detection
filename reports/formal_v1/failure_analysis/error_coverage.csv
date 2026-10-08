@@ -1,0 +1,10 @@
+category,method,scoring_events,fp_events,fn_events,distinct_fp_images,distinct_fn_images
+bottle,A,10452,203,371,16,8
+bottle,B,10452,77,369,16,8
+bottle,C,5226,22,216,11,8
+metal_nut,A,14352,216,1086,15,31
+metal_nut,B,14352,261,927,15,29
+metal_nut,C,7176,105,590,13,27
+tile,A,14508,652,471,26,18
+tile,B,14508,572,399,25,16
+tile,C,7254,260,238,21,18

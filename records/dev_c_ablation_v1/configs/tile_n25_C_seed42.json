@@ -1,0 +1,82 @@
+{
+  "category": "tile",
+  "seed": 42,
+  "normal_images": 25,
+  "method": "C",
+  "image_size": 224,
+  "memory_budget": 1000,
+  "projection_dim": 64,
+  "device": "cuda",
+  "weights": "data/weights/resnet18-f37072fd.pth",
+  "data_root": "data/mvtec_ad",
+  "manifest": "records/manifests/mvtec_v1.json",
+  "evaluation_split": "dev",
+  "threshold_quantile": 0.95,
+  "conditions": [
+    {
+      "name": "clean",
+      "operation": "clean",
+      "factor": 1.0
+    },
+    {
+      "name": "brightness_0.9",
+      "operation": "brightness",
+      "factor": 0.9
+    },
+    {
+      "name": "brightness_1.1",
+      "operation": "brightness",
+      "factor": 1.1
+    },
+    {
+      "name": "brightness_0.7",
+      "operation": "brightness",
+      "factor": 0.7
+    },
+    {
+      "name": "brightness_1.3",
+      "operation": "brightness",
+      "factor": 1.3
+    },
+    {
+      "name": "brightness_0.5",
+      "operation": "brightness",
+      "factor": 0.5
+    },
+    {
+      "name": "brightness_1.5",
+      "operation": "brightness",
+      "factor": 1.5
+    },
+    {
+      "name": "contrast_0.9",
+      "operation": "contrast",
+      "factor": 0.9
+    },
+    {
+      "name": "contrast_1.1",
+      "operation": "contrast",
+      "factor": 1.1
+    },
+    {
+      "name": "contrast_0.7",
+      "operation": "contrast",
+      "factor": 0.7
+    },
+    {
+      "name": "contrast_1.3",
+      "operation": "contrast",
+      "factor": 1.3
+    },
+    {
+      "name": "contrast_0.5",
+      "operation": "contrast",
+      "factor": 0.5
+    },
+    {
+      "name": "contrast_1.5",
+      "operation": "contrast",
+      "factor": 1.5
+    }
+  ]
+}

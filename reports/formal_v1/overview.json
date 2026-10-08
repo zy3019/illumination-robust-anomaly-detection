@@ -1,0 +1,34 @@
+{
+  "status": "final_test_complete",
+  "protocol_sha256": "58efbb9a2e54a4e276d062235f141f687a0aeaa84f26e48eb34cfe34b82a6885",
+  "model_count": 90,
+  "score_rows": 98280,
+  "independent_final_images": 252,
+  "counts": {
+    "bottle": {
+      "normal": 16,
+      "anomalous": 51,
+      "calibration": 42,
+      "train_pool": 167
+    },
+    "metal_nut": {
+      "normal": 18,
+      "anomalous": 74,
+      "calibration": 44,
+      "train_pool": 176
+    },
+    "tile": {
+      "normal": 26,
+      "anomalous": 67,
+      "calibration": 46,
+      "train_pool": 184
+    }
+  },
+  "process_wall_seconds": 2816.6849358,
+  "artifact_bytes": 20636739610,
+  "peak_cpu_gib": 1.2871589660644531,
+  "peak_torch_allocated_mib": 51.7705078125,
+  "peak_torch_reserved_mib": 66.0,
+  "pixel_audit_count": 6,
+  "final_test_evaluated": true
+}

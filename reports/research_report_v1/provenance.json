@@ -1,0 +1,36 @@
+{
+  "protocol_sha256": "58efbb9a2e54a4e276d062235f141f687a0aeaa84f26e48eb34cfe34b82a6885",
+  "report_date": "2026-10-08",
+  "pages": 8,
+  "inputs_sha256": {
+    "reports/formal_v1/report.md": "d84d1704c50c9169066d2bb2c5c55563b55903010d5e60c4b4a6ab7b66f84ef0",
+    "reports/formal_v1/macro_severity_seed_summary.csv": "35aa90bc4d99326d9919c475e59af2309d5fe4fe3c5760133e5408c910586f4c",
+    "reports/formal_v1/macro_severity_paired_seed_summary.csv": "6d301b5524454a74712284ef162d17a2bc4e63b4fad71f36aaad28988a1603d7",
+    "reports/formal_v1/seed_stability.png": "4e92d876cda03fb280a4c59a2cab2d15536e456c17c1038d8a8add488ed4810c",
+    "reports/formal_v1/paired_effects.png": "8b8aa2ae809beeac40fde093a9c157c59427260317bf92f64d94aaa9e4d63b3d",
+    "reports/formal_v1/overview.json": "e6e3542ff3eb5fa0c3fe9baefdbc45ca920481be09da4cf8515fb44ac3fc35c9",
+    "reports/formal_v1/failure_analysis/provenance.json": "1a7a8b84082919b9a81f5296701e94dcfbe3c064e1919195f6d56a7fea147354",
+    "reports/formal_v1/failure_analysis/paired_transitions.csv": "d28c0c3dece69ff691ecbf78ca757901a3744fb10b54070c3109749d8eb988c2",
+    "reports/formal_v1/failure_analysis/interpretation.md": "eb983011162ae6546ccd517ad1f029cb303c4661eddd66721807d77116d78c17",
+    "reports/formal_v1/failure_analysis/bottle_rescued_fp.png": "671a4d8f3ba0a44c1d5535ce40fa63de7551325ae0bacc239974c241e27e6447",
+    "reports/formal_v1/failure_analysis/metal_nut_persistent_fn.png": "948de14355e849482208cd5066b736567abb847eaa64633c6289ca3e6bed198c",
+    "reports/formal_v1/failure_analysis/tile_introduced_fn.png": "e1fb9bcf36a6460bede99dec238cd63e14ae26bae98510738c6c622d3830b5ae",
+    "scripts/build_research_report.py": "2384eb811cffeca19ef92113343ee59d0ca70bf12e719cc6b5be3295268b7e40",
+    "records/formal_v1/protocol.json": "58efbb9a2e54a4e276d062235f141f687a0aeaa84f26e48eb34cfe34b82a6885",
+    "records/manifests/mvtec_v1.json": "058d97eb3261ff4c7ad12c63931ab0c41e82012230907c9ba1c70433928bb6f6",
+    "reports/research_report_v1/figures/bottle_rescued_fp.png": "2d3261626cd182e20173986de42c35e3842f9532f5c673c5ab2c68086ae3cc86",
+    "reports/research_report_v1/figures/budget_summary.png": "d879bc4e37d26038c54fd680f1caacd167daed32c0546b3a53e6b1b13bb24959",
+    "reports/research_report_v1/figures/metal_nut_persistent_fn.png": "aea17ba64ffbb0dbc09d035b7a95f61ef9031baaa3b04db2576ab1b41c304c6c",
+    "reports/research_report_v1/figures/paired_effects.png": "d08296d9dab02c9b5b26a04c385b3e18bc59f0ddc6f10b7ad1746e3f766354dd",
+    "reports/research_report_v1/figures/tile_introduced_fn.png": "0b36f24f24631653da45bcca82299057200ac41cfabab54aaca3bfdf9d58c1c8",
+    "scripts/render_research_case_figures.py": "68a5d86fd48c565c3ce5d437c665a805b28e4ddb3d9dcdb3197c680917de862e",
+    "reports/formal_v1/macro_severity_by_seed.csv": "f0297c2f0455fcc06f6cc84b8d3db4eaa1e755e361b2330360b08a38100de692"
+  },
+  "outputs_sha256": {
+    "output/pdf/illumination_robustness_research_report.pdf": "7ed247db3429b1cadbcf80f1a00f622d06cd04ec0402279903d9dc3c33379861",
+    "reports/research_report_v1/report.md": "9fd39e87430fdf26f09569f35fdf38c0e15f363d772b84abf9308a019ece17ac",
+    "reports/research_report_v1/report_content.json": "9a92d3e903a0f6c880d69b7f0c492f952b3f39d09e3d8baee54db760c67e47df"
+  },
+  "external_references_checked": "2026-10-07",
+  "visual_review": "passed: all eight rendered pages inspected; no clipping, overlap or missing glyphs; summary labels enlarged"
+}

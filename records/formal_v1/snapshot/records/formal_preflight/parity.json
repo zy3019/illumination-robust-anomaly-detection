@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "final_test_evaluated": false,
+  "results": [
+    {
+      "job": "bottle_n5_B_seed42",
+      "score_rows": 208,
+      "exact_maps": 208,
+      "pixel_auroc_max_diff": 0.0
+    },
+    {
+      "job": "metal_nut_n25_C_seed17",
+      "score_rows": 299,
+      "exact_maps": 299,
+      "pixel_auroc_max_diff": 0.0
+    },
+    {
+      "job": "tile_nall_A_seed2026",
+      "score_rows": 312,
+      "exact_maps": 312,
+      "pixel_auroc_max_diff": 0.0
+    }
+  ],
+  "environment": {
+    "python": "3.14.4",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.5.2",
+    "pillow": "12.3.0"
+  },
+  "source_sha256": {
+    "scripts/evaluate_frozen_model.py": "613e7eb9dfd7f25269ff6d6197f19544a945805fedb416200b8f3941bb7f65bf",
+    "scripts/final_metrics.py": "27d7a825fbc71073945f01780fcafd4705f5fc048f18111861c3d6d4f85641c4",
+    "scripts/final_protocol.py": "5a038fb7e8e57aebb592f5df51243ac4388e5da11dcef025b2dc7e87c9a5c837"
+  }
+}

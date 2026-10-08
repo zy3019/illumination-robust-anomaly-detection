@@ -1,0 +1,12 @@
+{
+  "status": "locked_and_verified",
+  "protocol_sha256": "58efbb9a2e54a4e276d062235f141f687a0aeaa84f26e48eb34cfe34b82a6885",
+  "locked_at": "2026-10-07T15:36:50.091201+08:00",
+  "jobs": 90,
+  "final_images": {
+    "bottle": 67,
+    "metal_nut": 92,
+    "tile": 93
+  },
+  "final_test_evaluated_at_lock": false
+}
