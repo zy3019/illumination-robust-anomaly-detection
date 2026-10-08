@@ -1,3 +1,5 @@
+> 本页保留历史运行说明。v2 的恢复调度器使用独立 `--frozen-root`，当前步骤见 [reproduction_v2.md](reproduction_v2.md)。不要更改旧协议 digest 来适配新源码。
+
 # 正式评估运行与恢复
 
 工作目录：`D:\ChatGPT\111`。正式协议与模型清单已经冻结，本文件只说明操作，不改变协议。

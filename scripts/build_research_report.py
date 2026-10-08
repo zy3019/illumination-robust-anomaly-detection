@@ -6,6 +6,7 @@ import csv
 import hashlib
 import json
 import os
+import sys
 from pathlib import Path
 from xml.sax.saxutils import escape
 from reportlab.lib import colors
@@ -17,10 +18,12 @@ from PIL import Image as PILImage
 from pypdf import PdfReader
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from scripts.report_integrity import verify_report_inputs
 FORMAL=ROOT/'reports/formal_v1'
 FAIL=FORMAL/'failure_analysis'
-OUT=ROOT/'reports/research_report_v1'
-PDF=ROOT/'output/pdf/illumination_robustness_research_report.pdf'
+OUT=ROOT/'reports/research_report_v2'
+PDF=ROOT/'output/pdf/illumination_robustness_research_report_v2.pdf'
 SHA='58efbb9a2e54a4e276d062235f141f687a0aeaa84f26e48eb34cfe34b82a6885'
 
 
@@ -47,6 +50,7 @@ def mean_sd(row,key,scale=1,digits=4,signed=False):
 
 
 def main():
+    verify_report_inputs(ROOT)
     acceptance=read('records/formal_v1/acceptance.json')
     assert acceptance['status']=='accepted' and acceptance['protocol_sha256']==SHA
     assert digest(FORMAL/'report.md')==acceptance['report_sha256']
@@ -70,7 +74,7 @@ def main():
     def fig(block,path,caption,width=503):block.append(dict(kind='image',path=path,caption=caption,width=width))
 
     b=page('Illumination Robustness with Limited Normal Training Images')
-    b.append(dict(kind='subtitle',text='A controlled study of a simplified PatchCore baseline\nTechnical research report | 8 October 2026 | formal_v1'))
+    b.append(dict(kind='subtitle',text='A controlled study of a simplified PatchCore baseline\nTechnical report | 8 October 2026 | formal_v1 results, editorial revision 2'))
     h(b,'Abstract')
     p(b,'This project examines how normal-image budgets and synthetic illumination augmentation affect industrial anomaly detection at a fixed memory-bank capacity. A frozen ResNet18 feature extractor and a 1,000-vector memory bank are evaluated on bottle, metal_nut and tile. The locked matrix contains 90 models, three seeds and 13 conditions. Its 98,280 scoring events come from 252 independent held-out images, rather than 98,280 independent examples. All previously accepted development models and their clean-calibration thresholds are reused without selecting a winning seed.')
     p(b,'Clean macro image AUROC increases with the original-image budget. However, illumination degradation is not universally monotonic: both main methods have 55 nonmonotone AUROC-degradation sequences out of 108 dependent sequences. Across 12 perturbations, three-view augmentation changes macro image AUROC by +0.00087, +0.00235, +0.00017 and -0.00038 at budgets 5, 10, 25 and all. At the full budget, mean FPR falls by 7.90 percentage points, while pixel AUROC and recall decrease slightly. A post-hoc audit retains every error and illustrates both corrected and introduced failures. These observations support conditional benefits, not universal robustness or statistical significance.')
@@ -82,7 +86,7 @@ def main():
 
     b=page('2. Method and implementation boundary')
     p(b,'PatchCore uses a representative memory bank of nominal patch features for anomaly detection [1]. MVTec AD supplies industrial object and texture images with normal training images and annotated test defects [2,3]. This study adopts the memory-bank idea in a smaller, explicitly specified implementation. It does not attempt to match the original paper configuration or claim its benchmark performance.')
-    table(b,[['Component','Locked implementation'],['Input','RGB; direct bilinear resize to 224 x 224; ImageNet normalization'],['Backbone','Frozen ImageNet ResNet18; layer2 and layer3'],['Patch features','3 x 3 average pooling; bilinear feature alignment; 384 dimensions'],['Coreset','64-dimensional Gaussian projection; greedy selection; fixed seed'],['Bank','Exactly 1,000 distinct selected vectors; float32'],['Image score','Maximum raw Euclidean 1-nearest-neighbor patch distance'],['Anomaly map','Bilinear upsampling; no Gaussian smoothing'],['Threshold','Own clean-normal calibration 95th linear empirical quantile']],[1,2.8])
+    table(b,[['Component','Locked implementation'],['Input','RGB; direct bilinear resize to 224 x 224; ImageNet normalization'],['Backbone','Frozen ImageNet ResNet18; layer2 and layer3'],['Patch features','3 x 3 average pooling; bilinear feature alignment; 384 dimensions'],['Coreset','64-dimensional Gaussian projection; greedy selection; fixed seed'],['Bank','1,000 vectors; distinct candidate indices; float32'],['Image score','Maximum raw Euclidean 1-nearest-neighbor patch distance'],['Anomaly map','Bilinear upsampling; no Gaussian smoothing'],['Threshold','Own clean-normal calibration 95th linear empirical quantile']],[1,2.8])
     p(b,'For image x with patch descriptors f_i(x) and bank M, the score is s(x) = max_i min_{m in M} ||f_i(x)-m||_2. A prediction is anomalous only when s(x) > t. The same t is used for every illumination condition of that model. The maximum of the interpolated pixel map need not equal the maximum of the original patch scores.')
     h(b,'2.1 Original images, views and paired controls')
     p(b,'A uses original normal images only. B adds three illumination views per original; C adds one. Each added view randomly chooses brightness or contrast and samples its factor uniformly from [0.8,1.2]. C uses the same first view as B. For each category and seed, original-image budgets are nested and methods share identical original images. All methods end with 1,000 memory vectors, so the bank capacity is controlled even though candidate counts differ.')
@@ -151,7 +155,7 @@ def main():
     p(b,'Limitations include three categories, three seeds, small normal evaluation sets, synthetic brightness/contrast, direct square resizing, one backbone and a simplified coreset/scoring path. Development anomaly labels influenced the workflow. Post-hoc visual cases are explanatory, not causal or independently confirmed evidence. Clipping co-occurs with some errors, but zero-clipping cases also fail. New normalization, calibration or resolution hypotheses require a separately declared study and new independent evaluation data.')
     h(b,'8.1 Resources and reproducibility')
     p(b,'Accepted evaluation subprocesses total 46.94 minutes and 19.22 GiB of output. Peak CPU working set is 1.29 GiB; Torch peak allocated/reserved memory is 51.8/66.0 MiB, not whole-device usage. These costs exclude historical bank construction, interrupted attempts, extra audit work and waiting time. Job 40 was interrupted and repeated under the same protocol; 1,196 scores and 13 condition metrics matched exactly, excluding timing. Its first attempt remains archived in place.')
-    p(b,'Project root: D:/ChatGPT/111. Frozen execution: docs/formal_execution.md. Protocol and acceptance: records/formal_v1/. Final tables: reports/formal_v1/. Reproduce diagnosis with .venv-audit/Scripts/python.exe -B scripts/analyze_final_failures.py. Report source and rendering instructions are in reports/research_report_v1/. No GPU inference is needed to rebuild this report. Exact input/output hashes accompany both analysis and report.')
+    p(b,'Run from the repository root. Reproduction: docs/reproduction_v2.md. Frozen execution: docs/formal_execution.md. Protocol and acceptance: records/formal_v1/. Final tables: reports/formal_v1/. Reproduce diagnosis with .venv-audit/Scripts/python.exe -B scripts/analyze_final_failures.py. Report source and rendering instructions are in reports/research_report_v1/. No GPU inference is needed to rebuild this report. Exact input/output hashes accompany both analysis and report.')
     h(b,'8.2 Contribution and tool disclosure')
     p(b,'The human project owner directed the project stages and authorized protocol locking, final testing and this analysis. Code, experimental execution, numerical checks, figures and this report were produced with AI assistance in the shared workspace. This is a project-level contribution record, not evidence that the owner independently implemented or reviewed every component. Personal authorship and understanding claims require the owner\'s own verification before external submission.')
     h(b,'References and local evidence')

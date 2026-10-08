@@ -6,7 +6,7 @@
 
 ```powershell
 .\.venv\Scripts\python.exe scripts/download_assets.py
-.\.venv\Scripts\python.exe scripts/prepare_data.py
+.\.venv\Scripts\python.exe scripts/prepare_data.py --verify-existing
 ```
 
 下载脚本使用 Anomalib 数据模块列出的公开 MVTec AD 压缩包与 SHA-256，完整包约 5.26 GB，仅解压 bottle、metal_nut、tile。数据遵循 CC BY-NC-SA 4.0；数据和权重放在 Git 忽略的 `data/`。来源与校验信息写入 `data/mvtec_ad/download_provenance.json`。清单默认写入 `records/manifests/mvtec_v1.json`，存在时拒绝覆盖。
@@ -73,17 +73,15 @@ PNG 从左到右是输入图片、热力图叠加、真实掩码。显示尺度�
 
 覆盖数据划分、嵌套抽样、完整性、固定阈值、AUROC 同分、分块距离、记忆库容量、增强配对和最终测试访问限制。
 
-## 正式实验前
+## 当前状态（2026-10-08）
 
-- [x] 与 Anomalib 2.2.0 核对关键输出并记录差异（bottle/seed42/n5/A-B；未含 Lightning Engine）。
-- [x] 运行完整 13 个开发条件并统计裁剪，完成 15 张代表图的人工查看；正式压力条件定义仍待确认。
-- [x] 完成三类 5/10/25/全量 A/B 资源试运行（seed=42），共同容量 1,000 已验证可运行，正式预算待锁定。
-- [ ] 固定三个种子，保存运行矩阵，增加恢复与汇总命令。
-- [ ] 干净性能代价、资源代价、配对差值分析及 C 限定消融。
-- [ ] AU-PRO（若时间允许）及可重复计时。
-- [ ] 锁定并哈希正式协议，再实现最终测试入口。
+- [x] 完成 Anomalib 2.2.0 数值核对，保留简化实现边界。
+- [x] 三种子 A/B/C 共 90 个开发模型、13 个条件；固定容量 1,000。
+- [x] formal_v1 已锁定并完成最终评估、配对统计、资源与失败分析。
+- [x] 英文报告 v1 已交付；v2 修正采样术语，增加输入校验与独立输出。
+- AU-PRO、PaDiM、Demo 为本轮未纳入的可选项。
 
-现阶段分数均为开发记录，不构成 RQ1–RQ3 的正式结论。
+本目录为工程修订版，不能用修订源码替换历史冻结实现。复现与归档恢复见 [reproduction_v2.md](reproduction_v2.md)。正式结果仍限于三类、自定义划分和合成光照。
 
 ## 来源
 

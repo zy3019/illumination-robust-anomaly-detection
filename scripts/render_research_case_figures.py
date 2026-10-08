@@ -12,8 +12,10 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from anomaly.data import file_hash,load_image,load_mask,perturb
 from scripts.final_protocol import read
+from scripts.report_integrity import verify_report_inputs
 
 def main():
+    verify_report_inputs(ROOT)
     folder=ROOT/'reports/formal_v1/failure_analysis'
     provenance=read(folder/'provenance.json')
     with (folder/'selected_cases.csv').open(encoding='utf-8') as f:cases=list(csv.DictReader(f))

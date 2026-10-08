@@ -17,11 +17,17 @@ from scripts.summarize_dev_stability import read_csv,write_csv,close,METRICS,CAT
 
 
 def main():
+    global ROOT
     parser=argparse.ArgumentParser()
     parser.add_argument('--protocol',default='records/formal_v1/protocol.json')
     parser.add_argument('--digest',required=True)
+    parser.add_argument('--frozen-root', type=Path)
     args=parser.parse_args()
-    protocol,_=load_locked(ROOT/args.protocol,args.digest)
+    if args.frozen_root:
+        ROOT = args.frozen_root.resolve()
+    import scripts.run_final_matrix as runner
+    runner.ROOT = ROOT
+    protocol,_=load_locked(ROOT/args.protocol,args.digest,root=ROOT)
     OUT=ROOT/'reports'/protocol['id']
     status_path=ROOT/'outputs'/protocol['id']/'status.json'
     status=read(status_path)
@@ -97,8 +103,10 @@ def main():
     tables['macro_severity_paired_by_seed'] = macro_severity_pairs
     tables['macro_severity_seed_summary'] = seed_summary(macro_severity, ['budget','method','severity'], METRICS)
     tables['macro_severity_paired_seed_summary'] = seed_summary(macro_severity_pairs, ['budget','comparison','severity'], METRICS)
-    tables['resources_seed_summary'] = seed_summary(resources, ['category','budget','method'],
-        ['build_seconds','process_wall_seconds','inference_ms','candidate_vectors','peak_cpu_gib'])
+    resource_metrics = ['build_seconds','inference_ms','candidate_vectors','peak_cpu_gib']
+    if all(r['process_wall_seconds'] is not None for r in resources):
+        resource_metrics.append('process_wall_seconds')
+    tables['resources_seed_summary'] = seed_summary(resources, ['category','budget','method'], resource_metrics)
     for name, rows in tables.items():
         write_csv(OUT / (name + '.csv'), rows)
     monotonic = []
@@ -135,7 +143,8 @@ def main():
     overview=dict(status='final_test_complete',protocol_sha256=args.digest,model_count=90,
                   score_rows=sum(len(protocol['final_samples'][j['config']['category']])*13 for j in protocol['jobs']),
                   independent_final_images=sum(len(r) for r in protocol['final_samples'].values()),counts=counts,
-                  process_wall_seconds=sum(r['process_wall_seconds'] for r in resources),
+                  process_wall_seconds=sum(r['process_wall_seconds'] for r in resources if r['process_wall_seconds'] is not None),
+                  missing_process_wall_times=sum(r['process_wall_seconds'] is None for r in resources),
                   artifact_bytes=sum(r['artifact_bytes'] for r in resources),
                   peak_cpu_gib=max(r['peak_cpu_gib'] for r in resources),
                   peak_torch_allocated_mib=max(r['peak_torch_allocated_mib'] for r in resources),
@@ -146,7 +155,9 @@ def main():
     from scripts.render_final_results import render
     render(OUT,tables,overview,protocol)
     save_json(ROOT/'records'/protocol['id']/'acceptance.json',dict(status='accepted',protocol_sha256=args.digest,
-        models=90,score_rows=overview['score_rows'],pixel_audits=len(audits),report_sha256=file_hash(OUT/'report.md')))
+        models=90,score_rows=overview['score_rows'],pixel_audits=len(audits),report_sha256=file_hash(OUT/'report.md'),
+        output_sha256={p.relative_to(ROOT).as_posix():file_hash(p) for p in sorted(OUT.iterdir())
+                       if p.is_file() and p.suffix in {'.csv','.json','.png','.md'}}))
     print(overview)
 
 if __name__=='__main__':main()

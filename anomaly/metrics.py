@@ -22,8 +22,12 @@ def auroc(labels, scores):
 
 
 def classification_metrics(labels, scores, threshold):
-    labels = np.asarray(labels)
-    scores = np.asarray(scores)
+    labels = np.asarray(labels).reshape(-1)
+    scores = np.asarray(scores, dtype=np.float64).reshape(-1)
+    threshold = np.asarray(threshold, dtype=np.float64)
+    if threshold.ndim != 0 or not np.isfinite(threshold):
+        raise ValueError("Threshold must be a finite scalar")
+    threshold = float(threshold)
     auc = auroc(labels, scores)
     predicted = scores > threshold
     normal = labels == 0

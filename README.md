@@ -1,3 +1,5 @@
+> **修订版 v2（2026-10-08）**：原 formal_v1 数值证据保持冻结。当前代码包含指标、恢复和报告校验修复。请从 [干净目录复现](docs/reproduction_v2.md) 开始；个人验收见 [本人验收清单](docs/personal_acceptance.md)。历史正式入口应在恢复出的冻结目录执行。
+
 # 有限正常样本下工业异常检测的光照鲁棒性研究
 
 项目范围与实验协议以 `计算机视觉科研项目_16周计划大纲_修订版.md` 为准。
@@ -24,10 +26,10 @@
 
 ```powershell
 py -3.14 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-w1.txt
+.\.venv\Scripts\python.exe -m pip install -r records/requirements-w1-lock.txt
 .\.venv\Scripts\python.exe scripts/check_environment.py --require-cuda
 .\.venv\Scripts\python.exe scripts/download_assets.py
-.\.venv\Scripts\python.exe scripts/prepare_data.py
+.\.venv\Scripts\python.exe scripts/prepare_data.py --verify-existing
 .\.venv\Scripts\python.exe -m anomaly.run --config configs/bottle_pilot.json --output outputs/bottle_A_seed42_n5
 ```
 

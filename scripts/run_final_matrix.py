@@ -19,6 +19,24 @@ def now():return datetime.now(timezone(timedelta(hours=8))).isoformat()
 def atomic(path,value):
     temp=path.with_suffix('.tmp');save_json(temp,value);temp.replace(path)
 
+
+def recover_completed(previous, job, protocol, digest):
+    """Adopt a completed attempt after a scheduler crash; never rerun corrupt outputs."""
+    if not previous.get('output'):
+        return None
+    target = ROOT / previous['output']
+    if not (target / 'integrity.json').is_file():
+        return None  # Evaluator writes this last. Preserve the incomplete attempt.
+    verify_result(target, job, protocol, digest, previous.get('integrity_sha256'))
+    entry = dict(previous)
+    entry.update(status='complete', finished_at=now(), recovered_after_status_gap=True,
+                 integrity_sha256=file_hash(target/'integrity.json'),
+                 artifact_bytes=sum(p.stat().st_size for p in target.rglob('*') if p.is_file()))
+    # An interrupted scheduler cannot reconstruct subprocess wall time accurately.
+    entry.setdefault('process_wall_seconds', None)
+    entry['timing_note'] = 'Original subprocess wall time unavailable' if entry['process_wall_seconds'] is None else 'Original timing retained'
+    return entry
+
 def verify_result(folder,job,protocol,digest,expected_integrity=None):
     if expected_integrity:
         require(file_hash(folder/'integrity.json')==expected_integrity,'Output integrity manifest changed')
@@ -48,26 +66,43 @@ def verify_result(folder,job,protocol,digest,expected_integrity=None):
 
 
 def main():
+    global ROOT
     parser=argparse.ArgumentParser()
     parser.add_argument('--protocol',default='records/formal_v1/protocol.json')
     parser.add_argument('--digest',required=True)
+    parser.add_argument('--frozen-root', type=Path,
+                        help='Separate restored tree containing byte-identical frozen sources and models')
+    parser.add_argument('--verify-only', action='store_true')
     args=parser.parse_args()
+    if args.frozen_root:
+        ROOT = args.frozen_root.resolve()
     path=ROOT/args.protocol
-    protocol,_=load_locked(path,args.digest)
+    protocol,_=load_locked(path,args.digest,root=ROOT)
+    if args.verify_only:
+        print('Verified frozen inputs for', len(protocol['jobs']), 'jobs; no final images read')
+        return
     folder=ROOT/'outputs'/protocol['id'];folder.mkdir(parents=True,exist_ok=True)
-    require(shutil.disk_usage(ROOT).free>30*2**30,'Need 30 GiB free for final output/resume')
     lock=folder/'RUNNING.lock'
     with lock.open('x') as stream:stream.write(str(os.getpid()))
     try:
         status_path=folder/'status.json'
         status=read(status_path) if status_path.exists() else dict(protocol_sha256=args.digest,started_at=now(),jobs={})
         require(status['protocol_sha256']==args.digest,'Resume protocol differs')
+        status['scheduler_sha256'] = file_hash(Path(__file__))
+        status['scheduler_revision'] = 'recovery-v2; numerical evaluator remains frozen'
         for index,job in enumerate(protocol['jobs'],1):
-            load_locked(path,args.digest,job['id'])
+            load_locked(path,args.digest,job['id'],root=ROOT)
             previous=status['jobs'].get(job['id'],{})
             if previous.get('status')=='complete':
                 verify_result(ROOT/previous['output'],job,protocol,args.digest,previous['integrity_sha256'])
                 print(f'[{index}/90] Verified completed {job["id"]}',flush=True);continue
+            recovered = recover_completed(previous, job, protocol, args.digest)
+            if recovered is not None:
+                status['jobs'][job['id']] = recovered
+                atomic(status_path, status)
+                print(f'[{index}/90] Adopted verified completed {job["id"]}', flush=True)
+                continue
+            require(shutil.disk_usage(ROOT).free>30*2**30,'Need 30 GiB free for a new final attempt')
             attempt=1
             while (folder/f'{job["id"]}_attempt{attempt:02}').exists():attempt+=1
             target=folder/f'{job["id"]}_attempt{attempt:02}'

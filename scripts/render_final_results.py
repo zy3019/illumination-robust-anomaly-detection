@@ -130,4 +130,6 @@ def render(folder,tables,overview,protocol):
               '- severity*、macro* 和 *_seed_summary.csv 提供严重程度、类别宏平均与三种子统计。',
               '- resources.csv、overview.json、pixel_audit.json 和 provenance.json 保存资源、验收与可追溯记录。',
               '- 协议：records/formal_v1/protocol.json；运行状态和全部分数/异常图：outputs/formal_v1/。', '']
+    if overview.get('missing_process_wall_times', 0):
+        lines += ['', f"计时缺失：{overview['missing_process_wall_times']} 组在状态恢复前丢失子进程计时；上述累计时长仅包含有记录的组，不代表完整总耗时。未以零填补或重跑补计时。"]
     (folder/'report.md').write_text('\n'.join(lines),encoding='utf-8')
