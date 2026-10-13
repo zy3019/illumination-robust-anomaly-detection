@@ -4,6 +4,26 @@
 
 项目范围与实验协议以 `计算机视觉科研项目_16周计划大纲_修订版.md` 为准。
 
+## 开发与版本入口
+
+后续开发以本仓库的 **`master` 分支（基于已验证 v2）** 为入口。克隆到任意目录后，在克隆根目录工作；本机现有开发目录为 `111_v2`。
+
+- **开始开发与提交更新：** [开发工作流](docs/development.md)。
+- **冻结研究基线：** Git 标签 `formal-v1-baseline`；**工程验证完成的 v2：** 标签 `repair-v2-validated`。
+- **复现与验收：** [复现步骤](docs/reproduction_v2.md)、[历史目录用途及验证范围](reports/reproduction_v2.md)、[本人验收](docs/personal_acceptance.md)。
+- **项目技能：** 27 个技能随仓库保存在 [.agents/skills](.agents/skills/)，[调用方式与配置](docs/agents/README.md)。
+- **需求与任务：** [GitHub Issues](https://github.com/zy3019/illumination-robust-anomaly-detection/issues)。
+
+```powershell
+git clone https://github.com/zy3019/illumination-robust-anomaly-detection.git
+cd illumination-robust-anomaly-detection
+git status
+```
+
+旧研究目录、cleanroom 和 frozen_restore 的作用见上面的历史目录用途表；新克隆者无需拥有这些同名目录即可开发。恢复历史模型所需的冻结包及数据准备另见复现步骤。
+
+## 研究概况
+
 已直接进入项目开发，基础练习不作为前置要求。目前实现了简化 PatchCore 开发基线：数据划分、特征提取、固定容量记忆库、A/B/C 光照增强、正常校准阈值、开发集评分与热力图。
 
 运行方法与实现边界见 [项目运行说明](docs/implementation.md)。正式协议已锁定为 formal_v1，最终测试通过独立的协议校验入口运行，详见 [正式评估执行说明](docs/formal_execution.md)。
@@ -51,7 +71,7 @@ py -3.14 -m venv .venv
 
 当前 Git 仓库已存在。开发结果与最终测试结果分开记录，原始数据与大型模型文件不进入版本库。
 
-当前项目目录：`D:\ChatGPT\111`（C 盘旧路径保留兼容链接）。已完成 [固定阈值诊断报告](reports/dev_matrix_v1/threshold_diagnostics/report.md)，复核全部 24 个模型和 6,552 条开发评分。补充两个种子的 A/B 与三个种子的 C 消融已完成，共新增 66 组。合并后 90 个开发模型已核验，见 [三种子结果解读](reports/dev_stability_v1/findings.md) 和 [完整报告](reports/dev_stability_v1/report.md)。[正式协议](docs/formal_protocol_v1.md) 已锁定，90 组最终测试已全部完成并验收；[最终解读](reports/formal_v1/findings.md)、[验收记录](records/formal_v1/acceptance.json)、[执行说明](docs/formal_execution.md)。
+历史研究已完成 [固定阈值诊断报告](reports/dev_matrix_v1/threshold_diagnostics/report.md)，复核全部 24 个模型和 6,552 条开发评分。补充两个种子的 A/B 与三个种子的 C 消融已完成，共新增 66 组。合并后 90 个开发模型已核验，见 [三种子结果解读](reports/dev_stability_v1/findings.md) 和 [完整报告](reports/dev_stability_v1/report.md)。[正式协议](docs/formal_protocol_v1.md) 已锁定，90 组最终测试已全部完成并验收；[最终解读](reports/formal_v1/findings.md)、[验收记录](records/formal_v1/acceptance.json)、[执行说明](docs/formal_execution.md)。
 
 
 2026-10-08：已完成 [失败案例解读](reports/formal_v1/failure_analysis/interpretation.md) 与 [18 组案例索引](reports/formal_v1/failure_analysis/report.md)，并整理 [8 页英文研究报告及复现说明](reports/research_report_v1/README.md)。本轮仅分析既有结果，未改变正式模型、阈值或协议。
